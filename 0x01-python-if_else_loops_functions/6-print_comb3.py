@@ -6,5 +6,5 @@ for i in range(0, 9):
         else:
             print("{}{}".format(i, j), end="")
             if i + j != 17:
-                print(" ", end="")
+                print(", ", end="")
 print("")
