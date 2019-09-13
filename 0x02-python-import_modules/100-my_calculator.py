@@ -3,9 +3,6 @@ if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
     from sys import argv
     args = len(argv) - 1
-    if argv[2] != "+" or argv[2] != "-" or argv[2] != "*" or argv[2] != "/":
-            print("Unknown operator. Available operators: +, -, * and /")
-            exit(1)
     if not args == 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
     else:
