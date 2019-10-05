@@ -3,6 +3,7 @@
 python3 -c 'print(__import__("my_module").__doc__)'
 """
 
+
 def print_square(size):
     """Print a square of specified size
 

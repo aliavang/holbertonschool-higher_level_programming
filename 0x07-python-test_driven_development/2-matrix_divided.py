@@ -3,6 +3,7 @@
 python3 -c 'print(__import__("my_module").__doc__)'
 """
 
+
 def matrix_divided(matrix, div):
     """Divide matrix by passed divider
 

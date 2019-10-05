@@ -3,6 +3,7 @@
 python3 -c 'print(__import__("my_module").__doc__)'
 """
 
+
 def text_indentation(text):
     """Print two new newline after a '.', '?', ':'
 

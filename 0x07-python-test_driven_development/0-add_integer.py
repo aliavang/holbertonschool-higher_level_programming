@@ -3,6 +3,7 @@
 python3 -c 'print(__import__("my_module").__doc__)'
 """
 
+
 def add_integer(a, b=98):
     """Return sum of a and b
 
