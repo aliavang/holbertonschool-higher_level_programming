@@ -27,6 +27,7 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError("{:s} must be greater than 0".format(name))
 
+
 class Rectangle(BaseGeometry):
     """
     python3 -c 'print(__import__("my_module").MyClass.__doc__)'
@@ -59,6 +60,7 @@ class Rectangle(BaseGeometry):
         for h in range(self.__height):
             h_count += 1
         return "[Rectange] {:d}/{:d}".format(w_count, h_count)
+
 
 class Square(Rectangle):
     """

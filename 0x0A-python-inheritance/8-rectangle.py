@@ -27,6 +27,7 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError("{:s} must be greater than 0".format(name))
 
+
 class Rectangle(BaseGeometry):
     """
     python3 -c 'print(__import__("my_module").MyClass.__doc__)'
