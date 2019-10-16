@@ -1,8 +1,8 @@
 The ``base_geometry`` module
-================================
+============================
 
 Using ``base_geometry``
----------------------------
+-----------------------
 
 import file
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
