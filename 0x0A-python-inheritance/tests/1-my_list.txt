@@ -1,0 +1,14 @@
+The ``my_list`` module
+======================
+
+Using ``my_list``
+-----------------
+
+Import file
+>>> my_list = __import__('1-my_list').my_list
+
+>>> my_list = ""
+>>> my_list.print_sorted()
+>>> print(my_list)
+Traceback (most recent call last):
+AttributeError: 'str' object has no attribute 'print_sorted'
