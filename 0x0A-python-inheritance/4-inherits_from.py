@@ -3,6 +3,7 @@
 python3 -c 'print(__import__("my_module").__doc__)'
 """
 
+
 def inherits_from(obj, a_class):
     """Return True if object is an instance that inherited from specified\
     class, otherwise False
