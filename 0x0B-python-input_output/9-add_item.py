@@ -10,5 +10,5 @@ list = []
 l = len(argv)
 for arg in range(1, l):
     list.append(argv[arg])
-save(list, "add_item.py")
-load("add_item.py")
+save(list, "add_item.json")
+load("add_item.json")
