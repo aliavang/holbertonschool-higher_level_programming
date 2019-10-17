@@ -8,7 +8,10 @@ load = __import__('8-load_from_json_file').load_from_json_file
 
 list = []
 l = len(argv)
+try:
+    load("add_item.json")
+except:
+    pass
 for arg in range(1, l):
     list.append(argv[arg])
 save(list, "add_item.json")
-load("add_item.json")
