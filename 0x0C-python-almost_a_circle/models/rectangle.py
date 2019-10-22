@@ -149,5 +149,29 @@ class Rectangle(Base):
             print("")
 
     def __str__(self):
+        """Return information on rectangle in string format
+
+        python3 -c 'print(__import__("my_module").my_function.__doc__)'
+        python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
+        """
         return "[Rectangle] ({}) {}/{} - {}/{}".\
             format(self.id, self.__x, self.__y, self.__width, self.__height)
+
+    def update(self, *args):
+        """Assign argument to each attribute
+
+        python3 -c 'print(__import__("my_module").my_function.__doc__)'
+        python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
+        """
+        if not args is None:
+            for arg in range(len(args)):
+                if arg == 0:
+                    self.id = args[0]
+                elif arg == 1:
+                    self.__width = args[1]
+                elif arg == 2:
+                    self.__height = args[2]
+                elif arg == 3:
+                    self.__x = args[3]
+                elif arg == 4:
+                    self.__y = args[4]
