@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+python3 -c 'print(__import__("my_module").__doc__)'
+"""
+
+
 from models.base import Base
 
 
@@ -163,7 +168,7 @@ class Rectangle(Base):
         python3 -c 'print(__import__("my_module").my_function.__doc__)'
         python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
         """
-        if not args is None:
+        if args is not None:
             for arg in range(len(args)):
                 if arg == 0:
                     self.id = args[0]
@@ -175,6 +180,6 @@ class Rectangle(Base):
                     self.__x = args[3]
                 elif arg == 4:
                     self.__y = args[4]
-        if not kwargs is None:
+        if kwargs is not None:
             for k, it in kwargs.items():
                 setattr(self, k, it)
