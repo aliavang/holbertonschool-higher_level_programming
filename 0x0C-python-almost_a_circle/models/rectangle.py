@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 from models.base import Base
+
+
 class Rectangle(Base):
     """python3 -c 'print(__import__("my_module").MyClass.__doc__)'"""
 
@@ -145,3 +147,7 @@ class Rectangle(Base):
             for c in range(self.__width):
                 print("#", end="")
             print("")
+
+    def __str__(self):
+        return "[Rectangle] ({}) {}/{} - {}/{}".\
+            format(self.id, self.__x, self.__y, self.__width, self.__height)
