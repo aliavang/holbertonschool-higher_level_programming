@@ -9,6 +9,22 @@ class Rectangle(Base):
         python3 -c 'print(__import__("my_module").my_function.__doc__)'
         python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
         """
+        if not type(width) == int:
+            raise TypeError("width must be an integer")
+        if width <= 0:
+            raise ValueError("width must be > 0")
+        if not type(height) == int:
+            raise TypeError("height must be an integer")
+        if height <= 0:
+            raise ValueError("height must be > 0")
+        if not type(x) == int:
+            raise TypeError("x must be an integer")
+        if x < 0:
+            raise ValueError("x must be >= 0")
+        if not type(y) == int:
+            raise TypeError("x must be an integer")
+        if y < 0:
+            raise ValueError("y must be >= 0")
         self.__width = width
         self.__height = height
         self.__x = x
@@ -31,7 +47,12 @@ class Rectangle(Base):
         python3 -c 'print(__import__("my_module").my_function.__doc__)'
         python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
         """
-        self.__width = value
+        if not type(value) == int:
+            raise TypeError("width must be an integer")
+        elif value <= 0:
+            raise ValueError("width must be > 0")
+        else:
+            self.__width = value
 
     @property
     def height(self):
@@ -49,7 +70,12 @@ class Rectangle(Base):
         python3 -c 'print(__import__("my_module").my_function.__doc__)'
         python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
         """
-        self.__height = value
+        if not type(value) == int:
+            raise TypeError("height must be an integer")
+        elif value <= 0:
+            raise ValueError("height must be > 0")
+        else:
+            self.__height = value
 
     @property
     def x(self):
@@ -67,7 +93,12 @@ class Rectangle(Base):
         python3 -c 'print(__import__("my_module").my_function.__doc__)'
         python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
         """
-        self.__x = value
+        if not type(value) == int:
+            raise TypeError("x must be an integer")
+        elif value < 0:
+            raise ValueError("width must be >= 0")
+        else:
+            self.__x = value
 
     @property
     def y(self):
@@ -85,4 +116,9 @@ class Rectangle(Base):
         python3 -c 'print(__import__("my_module").my_function.__doc__)'
         python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
         """
-        self.__y = value
+        if not type(value) == int:
+            raise TypeError("y must be an integer")
+        elif value < 0:
+            raise ValueError("y must be >= 0")
+        else:
+            self.__y = value
