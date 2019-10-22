@@ -14,7 +14,7 @@ class Base:
         python3 -c 'print(__import__("my_module").my_function.__doc__)'
         python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
         """
-        if not id is None:
+        if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
