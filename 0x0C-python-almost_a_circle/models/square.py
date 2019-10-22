@@ -45,3 +45,23 @@ class Square(Rectangle):
         """
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """Update attributes of square
+
+        python3 -c 'print(__import__("my_module").my_function.__doc__)'
+        python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
+        """
+        if args is not None:
+            for arg in range(len(args)):
+                if arg == 0:
+                    self.id = args[0]
+                elif arg == 1:
+                    self.size = args[1]
+                elif arg == 2:
+                    self.x = args[2]
+                elif arg == 3:
+                    self.y = args[3]
+        if kwargs is not None:
+            for k, it in kwargs.items():
+                setattr(self, k, it)
