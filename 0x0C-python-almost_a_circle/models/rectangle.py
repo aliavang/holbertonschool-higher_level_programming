@@ -137,7 +137,11 @@ class Rectangle(Base):
         python3 -c 'print(__import__("my_module").my_function.__doc__)'
         python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
         """
+        for n in range(self.__y):
+            print("")
         for r in range(self.__height):
+            for s in range(self.__x):
+                print(" ", end="")
             for c in range(self.__width):
                 print("#", end="")
             print("")
