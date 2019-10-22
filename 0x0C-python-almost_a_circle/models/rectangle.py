@@ -130,3 +130,14 @@ class Rectangle(Base):
         python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
         """
         return self.__width * self.__height
+
+    def display(self):
+        """Print rectangle to stdout with '#' character
+
+        python3 -c 'print(__import__("my_module").my_function.__doc__)'
+        python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
+        """
+        for r in range(self.__height):
+            for c in range(self.__width):
+                print("#", end="")
+            print("")
