@@ -72,4 +72,4 @@ class Square(Rectangle):
         python3 -c 'print(__import__("my_module").my_function.__doc__)'
         python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
         """
-        return {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
+        return {'id': self.id, 'size': self.height, 'x': self.x, 'y': self.y}
