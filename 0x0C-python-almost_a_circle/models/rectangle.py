@@ -183,3 +183,12 @@ class Rectangle(Base):
         if kwargs is not None:
             for k, it in kwargs.items():
                 setattr(self, k, it)
+
+    def to_dictionary(self):
+        """Return dictionary representation of rectangle
+
+        python3 -c 'print(__import__("my_module").my_function.__doc__)'
+        python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
+        """
+        return {'id': self.id, 'width': self.width,\
+                'height': self.height, 'x': self.x, 'y': self.y}
