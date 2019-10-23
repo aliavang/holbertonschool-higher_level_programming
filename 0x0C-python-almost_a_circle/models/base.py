@@ -40,9 +40,15 @@ class Base:
         python3 -c 'print(__import__("my_module").my_function.__doc__)'
         python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
         """
-        filename = "{}.json".format(cls)
-        my_obj = Base.to_json_string([list_objs])
+        import json
+        filename = "{}.json".format(cls.__name__)
+        my_obj = []
         with open(filename, 'w') as f:
+            if list_objs is None:
+                f.write("[]")
+            else:
+                for i in list_objs:
+                    my_obj.append(i.to_dictionary())
             json.dump(my_obj, f)
 
     @classmethod
