@@ -20,6 +20,7 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         """Return JSON string representation
 
@@ -27,7 +28,7 @@ class Base:
         python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
         """
         import json
-        if list_dictionaries is None or list_dictionaries == []:
-            return "[]"
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return []
         else:
             return json.dumps(list_dictionaries)
