@@ -50,7 +50,7 @@ class Base:
                     my_obj.append(i.to_dictionary())
             f.write(cls.to_json_string(my_obj))
 
-    @classmethod
+    @staticmethod
     def from_json_string(json_string):
         """Return list of JSON string representation
 
