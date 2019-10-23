@@ -40,7 +40,6 @@ class Base:
         python3 -c 'print(__import__("my_module").my_function.__doc__)'
         python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
         """
-        import json
         filename = "{}.json".format(cls.__name__)
         my_obj = []
         with open(filename, 'w') as f:
@@ -49,7 +48,7 @@ class Base:
             else:
                 for i in list_objs:
                     my_obj.append(i.to_dictionary())
-            json.dump(my_obj, f)
+            f.write(cls.to_json_string(my_obj))
 
     @classmethod
     def from_json_string(json_string):
