@@ -4,10 +4,10 @@ Script to list all states from database
 """
 if __name__ = "__main__":
     import MySQLdb
-    from sys import argv
+    import sys
 
-    con = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
-                          pw=argv[2], db=argv[3])
+    con = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
+                          pw=sys.argv[2], db=sys.argv[3], charset="utf8")
     cur = con.cursor()
     cur.execute("SELECT * FROM states ORDERED BY id ASC")
     for row in cur.fetchall():
