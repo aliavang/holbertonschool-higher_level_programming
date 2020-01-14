@@ -5,7 +5,7 @@ Fetches from specified site and displays body of response
 import urllib
 
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
         html = response.read()
         print("Body response:")
