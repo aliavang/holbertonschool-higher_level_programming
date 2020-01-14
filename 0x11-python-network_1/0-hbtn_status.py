@@ -2,7 +2,7 @@
 """
 Fetches from specified site and displays body of response
 """
-import urllib
+import urllib.request
 
 
 if __name__ == "__main__":
