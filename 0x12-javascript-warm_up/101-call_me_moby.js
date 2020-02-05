@@ -1,9 +1,9 @@
 #!/usr/bin/node
 // Execute function x times
-exports.callMeMoby = function (x, func) {
+exports.callMeMoby = function (x, theFunction) {
   let i = 0;
   while (i < x) {
-    func();
+    theFunction();
     i++;
   }
 };
