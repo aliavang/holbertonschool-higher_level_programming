@@ -12,4 +12,4 @@ if __name__ == '__main__':
         r.raise_for_status()
         print(r.text)
     except Exception as e:
-        print("Error code: {}".format(e.status_code))
+        print("Error code: {}".format(r.status_code))
