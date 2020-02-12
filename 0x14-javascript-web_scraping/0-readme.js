@@ -6,5 +6,5 @@ r.readFile(file, 'utf-8', function (err, data) {
   if (err) {
     return console.log(err);
   }
-  console.log(String(data).replace('\n', ''));
+  console.log(data.replace('\n', ''));
 });
